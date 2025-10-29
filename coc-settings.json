@@ -1,0 +1,13 @@
+{
+  "diagnostic.displayByAle": false,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.enableSign": true,
+  "diagnostic.virtualTextPrefix": "●", 
+  "diagnostic.virtualTextLineSeparator": "│"
+}
+{
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.checkOnSave.extraArgs": ["--all-targets", "--all-features"]
+}
+
