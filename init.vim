@@ -1,5 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" 文件管理
 Plug 'preservim/nerdtree'
 
 " 补全 & LSP
