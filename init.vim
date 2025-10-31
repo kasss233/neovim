@@ -5,7 +5,7 @@ Plug 'preservim/nerdtree'
 
 " 补全 & LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plug 'tpope/vim-fugitive'
 " 自动括号
 Plug 'jiangmiao/auto-pairs'
 Plug 'ojroques/nvim-osc52'
@@ -14,10 +14,14 @@ Plug 'vim-airline/vim-airline'
 
 " 快捷键提示
 Plug 'folke/which-key.nvim'
-
+Plug 'glepnir/dashboard-nvim'
 Plug 'Chiel92/vim-autoformat'
-
 Plug 'ojroques/nvim-osc52'
+Plug 'airblade/vim-gitgutter'   " 左侧显示修改标记
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'onsails/lspkind-nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'stevearc/dressing.nvim'
 call plug#end()
 set number                  " 显示行号
 syntax on                   " 开启语法高亮
@@ -25,7 +29,8 @@ set ignorecase smartcase    " 搜索大小写智能匹配
 let mapleader="\<Space>"
 
 nnoremap <leader>f :Autoformat<CR>
-nnoremap <leader>q :wq<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>tt :term<CR>
 nnoremap <leader>tn :tabnew<CR>
 nnoremap <leader>th :tabprev<CR>
