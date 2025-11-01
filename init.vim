@@ -1,17 +1,17 @@
 call plug#begin('~/.config/nvim/plugged')
-
+Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'main' }
 Plug 'preservim/nerdtree'
-
-" 补全 & LSP
+Plug 'github/copilot.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'zbirenbaum/copilot.lua'
 Plug 'tpope/vim-fugitive'
 " 自动括号
 Plug 'jiangmiao/auto-pairs'
 Plug 'ojroques/nvim-osc52'
 " 状态栏
 Plug 'vim-airline/vim-airline'
-
-" 快捷键提示
+Plug 'nvim-lua/plenary.nvim' 
 Plug 'folke/which-key.nvim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'Chiel92/vim-autoformat'
@@ -67,7 +67,10 @@ lua << EOF
 require('osc52').setup{
     trim = true,
 }
-
+require('CopilotChat').setup{
+	debug =true,
+    -- 在这里添加你的配置选项
+}
 -- 绑定快捷键
 vim.api.nvim_set_keymap('n', '<leader>y', "<cmd>lua require('osc52').copy_operator()<CR>", {noremap=true, silent=true})
 vim.api.nvim_set_keymap('v', '<leader>y', "<cmd>lua require('osc52').copy_visual()<CR>", {noremap=true, silent=true})
